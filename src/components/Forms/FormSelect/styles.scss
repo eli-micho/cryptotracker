@@ -1,0 +1,22 @@
+.formRow {
+    display: inline-block;
+    width: 100%;
+  
+    label {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  
+    select {
+      background-color: #222831;
+      color: white;
+      display: block;
+      width: auto;
+      float: left;
+      padding: 8px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }

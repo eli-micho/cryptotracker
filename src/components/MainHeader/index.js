@@ -11,6 +11,9 @@ const MainHeader = () => {
                     <li><button><i className="fas fa-edit"></i></button></li>
                 </ul>
             </div>
+            <div className="appInfo">
+                <p>Welcome to CryptoCrunch. Create an account, log in and start tracking your favourite cryptocurrencies!</p>
+            </div>
         </div>
     );
 };
