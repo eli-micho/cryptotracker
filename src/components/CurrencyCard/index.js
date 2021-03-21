@@ -1,24 +1,31 @@
-import React from 'react';
-import chart from './../../assets/imgs/chart.svg';
+import React, {Component} from 'react';
 import './styles.scss';
 
-const CurrencyCard = (props) => {
-    console.log(props.coinData[0])
-    return(
-        <div className="currencyCard">
-            <h3 className="currencyName">{props.coinData[0].id}</h3>
-            <div className="currencyInfo">
-                <div className="chartWrap">
-                    <img src={chart}/>
+class CurrencyCard extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            
+        }
+    }
+    render(){
+        return(
+            <div className="currencyCard">
+                <div className="currencyIcon">
+                    <img className="currencyIcon" src={this.props.coinData.image}/>
+                    <h3 className="currencyName">{this.props.coinData.name}</h3>
                 </div>
-                <ul className="priceData">
-                   <li>Current Price: ${props.coinData[0].current_price}</li>
-                   <li>24H High: ${props.coinData[0].high_24h}</li>
-                   <li>52 Week Low: ${props.coinData[0].low_24h}</li> 
-                </ul>
+                <div className="currencyInfo">
+                    <ul className="priceData">
+                       <li>Current Price: ${this.props.coinData.current_price}</li>
+                       <li>24H High ${this.props.coinData.high_24h}</li>
+                       <li>24H Low: ${this.props.coinData.low_24h}</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
+    
 };
 
 export default CurrencyCard;;

@@ -3,13 +3,13 @@ import './index.scss';
 
 //Components
 import Sidebar from './components/Sidebar';
-import MainContent from './components/MainContent';
 
 //Layouts
 import MainLayout from './layouts/MainLayout';
 
 //Pages
 import Homepage from './pages/Homepage';
+import Trending from './pages/Trending';
 
 function App() {
   return (
@@ -21,6 +21,11 @@ function App() {
             <Homepage/>
           </MainLayout>
         )} />
+        <Route exact path="/trending" render={() => {
+          <MainLayout>
+            <Trending/>
+          </MainLayout>
+        }} />
       </Switch>
     </div>
   );
