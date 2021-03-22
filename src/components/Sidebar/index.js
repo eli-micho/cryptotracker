@@ -16,7 +16,7 @@ const Sidebar = () => {
             <div className="userActionsWrap">
                 <ul>
                     <li><NavLink exact={true} activeClassName="isActive" to="/"><i className="fas fa-home"></i>Home</NavLink></li>
-                    <li><NavLink exact={true} activeClassName="isActive" to="/popular"><i className="fas fa-fire"></i>Trending</NavLink></li>
+                    <li><NavLink exact={true} activeClassName="isActive" to="/trending"><i className="fas fa-fire"></i>Trending</NavLink></li>
                     <li><NavLink exact={true} activeClassName="isActive" to="/nft"><i className="fab fa-hacker-news"></i>NFTs Portal</NavLink></li>
                 </ul>
             </div>

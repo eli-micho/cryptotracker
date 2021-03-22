@@ -21,11 +21,11 @@ function App() {
             <Homepage/>
           </MainLayout>
         )} />
-        <Route exact path="/trending" render={() => {
+        <Route exact path="/trending" render={() => (
           <MainLayout>
             <Trending/>
           </MainLayout>
-        }} />
+        )} />
       </Switch>
     </div>
   );
