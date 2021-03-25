@@ -10,6 +10,8 @@ import MainLayout from './layouts/MainLayout';
 //Pages
 import Homepage from './pages/Homepage';
 import Trending from './pages/Trending';
+import Register from './pages/Register';
+import SignIn from './pages/SignIn';
 
 function App() {
   return (
@@ -24,6 +26,18 @@ function App() {
         <Route exact path="/trending" render={() => (
           <MainLayout>
             <Trending/>
+          </MainLayout>
+        )} />
+
+        <Route exact path="/signin" render={() => (
+          <MainLayout>
+            <SignIn/>
+          </MainLayout>
+        )} />
+
+        <Route exact path="/register" render={() => (
+          <MainLayout>
+            <Register/>
           </MainLayout>
         )} />
       </Switch>

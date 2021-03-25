@@ -18,13 +18,28 @@
         display: flex;
         margin-left: 20px;
 
-        button {
+        a {
             border: none;
             background-color: #222831;
             color: white;
             margin-right: 10px;
             width: 35px;
             height: 35px;
+
+            &:hover {
+                background-color: white;
+                color: #222831
+            }
+        }
+    }
+
+    .logInBtn, .signInBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            
         }
     }
 }
