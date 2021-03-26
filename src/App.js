@@ -1,4 +1,7 @@
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
+import { checkUserSession } from './redux/User/user.actions';
 import './index.scss';
 
 //Components
@@ -13,7 +16,11 @@ import Trending from './pages/Trending';
 import Register from './pages/Register';
 import SignIn from './pages/SignIn';
 
-function App() {
+const App = props => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(checkUserSession())
+  }, [])
   return (
     <div className="App">
       <Sidebar/>

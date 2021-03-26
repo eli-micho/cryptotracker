@@ -16,6 +16,7 @@
     .userBtns {
         padding: 0;
         display: flex;
+        align-items: center;
         margin-left: 20px;
 
         a {
@@ -25,21 +26,27 @@
             margin-right: 10px;
             width: 35px;
             height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             &:hover {
                 background-color: white;
                 color: #222831
             }
         }
-    }
 
-    .logInBtn, .signInBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .logOutBtn {
+            width: 100%;
+        }
 
-        &:hover {
-            
+        .userFullName {
+            h2 {
+                display: inline-block;
+                padding: 0;
+                margin: 0;
+                margin-right: 15px;
+            }
         }
     }
 }

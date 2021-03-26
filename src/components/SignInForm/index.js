@@ -26,7 +26,6 @@ const RegisterForm = (props) => {
     }, [currentUser]);
 
     const resetForm = () => {
-
         setEmail('');
         setPassword('');
     };
@@ -59,7 +58,7 @@ const RegisterForm = (props) => {
             />
 
             <FormButton type="submit">
-                Register
+                Sign In
             </FormButton>
         </form>
     );

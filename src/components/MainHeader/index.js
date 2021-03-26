@@ -4,11 +4,11 @@ import { signOutUserStart } from './../../redux/User/user.actions';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
-const mapState = (user) => ({
-    currentUser: user.currentUser
+const mapState = (state) => ({
+    currentUser: state.user.currentUser
 })
 
-const MainHeader = () => {
+const MainHeader = (props) => {
     const dispatch = useDispatch();
     const { currentUser } = useSelector(mapState);
 
@@ -22,22 +22,30 @@ const MainHeader = () => {
                 <ul className="userBtns">
                     {currentUser && [
                         <li>
-                            {currentUser}
+                            <span className="userFullName"><h2>{currentUser.fullName}</h2></span>
+                        </li>,
+                        <li>
+                            <Link className="logOutBtn" to="/" onClick={()=> signOut()}>
+                                <span>Log Out</span>
+                            </Link>
                         </li>
                     ]}
-                    <li>
-                        <Link className="signInBtn" to="/signin">
-                            <i className="fas fa-sign-in-alt"></i>
-                            <span className="editSpan" style={{display: "none"}}>Edit</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="logInBtn" to="/register">
-                            <i className="fas fa-user"></i>
-                            <span className="profileSpan" style={{display: "none"}}>My Profile</span>
-                        </Link>
-                    </li>
-                    
+                         
+                    {!currentUser && [
+                        <li>
+                            <Link className="signInBtn" to="/signin">
+                                <i className="fas fa-sign-in-alt"></i>
+                                <span className="editSpan" style={{display: "none"}}>Edit</span>
+                            </Link>
+                        </li>,
+                        <li>
+                            <Link className="logInBtn" to="/register">
+                                <i className="fas fa-user"></i>
+                                <span className="profileSpan" style={{display: "none"}}>My Profile</span>
+                            </Link>
+                        </li>,
+                        
+                    ]}
                 </ul>
             </div>
             <div className="appInfo">
@@ -46,5 +54,9 @@ const MainHeader = () => {
         </div>
     );
 };
+
+MainHeader.defaultProps = {
+    currentUser: null
+}
 
 export default MainHeader;
