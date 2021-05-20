@@ -33,9 +33,9 @@ const MainHeader = (props) => {
                          
                     {!currentUser && [
                         <li>
-                            <Link className="signInBtn" to="/signin">
-                                <i className="fas fa-sign-in-alt"></i>
-                                <span className="editSpan" style={{display: "none"}}>Edit</span>
+                            <Link className="signInBtn" to="/signin" >
+                                <i className="fas fa-sign-in-alt" ></i>
+                                <span className="editSpan" style={{display: "none"}}>Sign In</span>
                             </Link>
                         </li>,
                         <li>

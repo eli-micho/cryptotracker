@@ -17,7 +17,7 @@ const Sidebar = () => {
                 <ul>
                     <li><NavLink exact={true} activeClassName="isActive" to="/"><i className="fas fa-home"></i>Home</NavLink></li>
                     <li><NavLink exact={true} activeClassName="isActive" to="/trending"><i className="fas fa-fire"></i>Trending</NavLink></li>
-                    <li><NavLink exact={true} activeClassName="isActive" to="/nft"><i className="fab fa-hacker-news"></i>NFTs Portal</NavLink></li>
+                    <li><a href="https://opensea.io" target="_blank"><i className="fab fa-hacker-news"></i>NFTs Portal</a></li>
                 </ul>
             </div>
 
