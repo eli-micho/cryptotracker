@@ -5,6 +5,7 @@ import { emailSignInStart } from './../../redux/User/user.actions';
 
 import FormButton from '../Forms/FormButton';
 import FormInput from './../Forms/FormInput';
+import ErrorTab from './../ErrorTab';
 import './styles.scss';
 
 const mapState = ({ user }) => ({
@@ -39,7 +40,8 @@ const RegisterForm = (props) => {
     };
 
     return(
-        <form className="signInForm" onSubmit={handleFormSubmit}>
+        <div>
+            <form className="signInForm" onSubmit={handleFormSubmit}>
 
             <FormInput
                 label="Email"
@@ -60,7 +62,10 @@ const RegisterForm = (props) => {
             <FormButton type="submit">
                 Sign In
             </FormButton>
-        </form>
+            </form>
+
+            <ErrorTab/>
+        </div>
     );
 };
 

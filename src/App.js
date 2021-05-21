@@ -25,7 +25,7 @@ const App = props => {
     <div className="App">
       <Sidebar/>
       <Switch>
-        <Route exact path="/" render={() => (
+        <Route exact path="/cryptotracker" render={() => (
           <MainLayout>
             <Homepage/>
           </MainLayout>
